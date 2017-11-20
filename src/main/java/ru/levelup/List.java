@@ -6,11 +6,9 @@ package ru.levelup;
 public class List<E> {
     private Element head;
     private Element tail;
-    private int index;
 
     public List(){
         head = null;
-        index = 0;
     }
 
     public boolean add(E value){
