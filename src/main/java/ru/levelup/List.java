@@ -11,6 +11,14 @@ public class List<E> {
         head = null;
     }
 
+    public Element getHead(){
+        return head;
+    }
+
+    public Element getTail(){
+        return tail;
+    }
+
     public boolean add(E value){
         Element x = new Element(value);
 
@@ -82,5 +90,7 @@ public class List<E> {
         Element y = new Element("Not found");
         return y;
     }
+
+
 
 }
