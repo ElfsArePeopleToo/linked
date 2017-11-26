@@ -61,7 +61,7 @@ public class List<E> {
         if(tail == null){
             return false;
         }
-        for(int i = 0; i<=index; i++){
+        for(int i = 0; i<= index; i++){
             if(i == index){
                 previous.next = current.next;
                 return true;
@@ -79,7 +79,7 @@ public class List<E> {
             Element x = new Element("The list is empty");
             return x;
         }
-        for(int i = 0; i<=index; i++){
+        for(int i = 0; i <= index; i++){
             if(i == index){
                 return current;
             }else{
