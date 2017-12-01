@@ -6,12 +6,7 @@ import org.junit.jupiter.api.Test;
 /**
  * Created by Ирина on 20.11.2017.
  */
-//
-//
-///последние 3 теста не проходят, не понимаю как правильно протестировать или вообще стоит переписать метод?
-// насчет testRemove_validIntAsIndex_returnFalse() тоже не уверена
-//
-//
+
 
 public class ListTest {
 
