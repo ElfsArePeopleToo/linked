@@ -6,10 +6,13 @@ import org.junit.jupiter.api.Test;
 /**
  * Created by Ирина on 20.11.2017.
  */
+
+
 public class ListTest {
+
     @Test
     public void testAdd_validParams_returnBoolean(){
-        // setup
+        //setup
         List list = new List();
         //when
         list.add(Math.random());
@@ -17,13 +20,14 @@ public class ListTest {
         boolean test;
         if(list.getHead() == null){
             test = false;
-        } else{
+        } else {
             test = true;
         }
         Assertions.assertTrue(test);
     }
+
     @Test
-    public void testRemove_validElementAsIndex_returnBoolean(){
+    public void testRemove_validElement_returnBoolean(){
         //setup
         List list = new List();
         list.add(33);
@@ -37,7 +41,7 @@ public class ListTest {
         boolean test = true;
         Element current = list.getHead();
         Element previous;
-        int count=0;
+
         while(current.next != null){
             if(current.equals(element)){
                 test = false;
@@ -47,30 +51,33 @@ public class ListTest {
         }
         Assertions.assertTrue(test);
     }
+
     @Test
     public void testRemove_validIntAsIndex_returnBoolean(){
         //setup
         List list = new List();
-        for(int i = 0; i<=10; i++){
+
+       for(int i = 0; i<10; i++){
             list.add(Math.random());
         }
+
         //when
         list.remove(5);
         //then
-        boolean test;
+        boolean test = true;
         Element current = list.getHead();
         Element previous;
-        int count=0;
+        int count = 0;
+
         while(current.next != null){
             previous = current;
             current = current.next;
             count++;
         }
-
-        if(count != 9){
-            test = false;
-        } else {
+        if(count < 10){
             test = true;
+        } else{
+            test = false;
         }
         Assertions.assertTrue(test);
     }
@@ -79,18 +86,20 @@ public class ListTest {
     public void testGet_validIntIndex_returnElement(){
         //setup
         List list = new List();
-        for(int i = 0; i<=10; i++){
-            list.add(Math.random());
-        }
+
+        list.add(55);
+        list.add(44);
+        list.add(33);
+
         //when
-        list.get(5);
+        Element elementGet = list.get(1);
         //then
-        boolean test = false;
-        if(list.get(5) instanceof Element){
+        boolean test;
+        if(elementGet instanceof Element){
             test = true;
+        } else {
+            test = false;
         }
         Assertions.assertTrue(test);
     }
-
 }
-
